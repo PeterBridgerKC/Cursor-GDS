@@ -1,0 +1,34 @@
+{% extends "govuk/template.njk" %}
+
+{% block pageTitle %}
+Check your answers – Renew your driving licence – GOV.UK
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Full name</dt>
+      <dd class="govuk-summary-list__value">John Doe</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Date of birth</dt>
+      <dd class="govuk-summary-list__value">1990-01-01</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Licence number</dt>
+      <dd class="govuk-summary-list__value">DOE900101A99AA</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Expiry date</dt>
+      <dd class="govuk-summary-list__value">2030-01-01</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Address</dt>
+      <dd class="govuk-summary-list__value">123 Example Street, Exampletown, EX4 MPL</dd>
+    </div>
+  </dl>
+  <form method="post" action="/check-answers">
+    <button class="govuk-button" type="submit">Confirm and send</button>
+  </form>
+{% endblock %} 

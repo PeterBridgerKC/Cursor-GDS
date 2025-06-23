@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block pageTitle %}GOV.UK Service{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/govuk/govuk-frontend.min.css">
+    <link rel="shortcut icon" href="/public/govuk/assets/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="govuk-template__body">
+    <script src="/public/govuk/govuk-frontend.min.js"></script>
+    <header class="govuk-header" role="banner" data-module="govuk-header">
+      <div class="govuk-header__container govuk-width-container">
+        <div class="govuk-header__logo">
+          <a href="/" class="govuk-header__link govuk-header__link--homepage">
+            <span class="govuk-header__logotype-text">GOV.UK</span>
+          </a>
+        </div>
+        <div class="govuk-header__content">
+          <span class="govuk-header__service-name">Renew your driving licence</span>
+        </div>
+      </div>
+    </header>
+    <div class="govuk-width-container">
+      <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">Prototype</strong>
+          <span class="govuk-phase-banner__text">This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+      {% block content %}{% endblock %}
+    </div>
+    <footer class="govuk-footer " role="contentinfo">
+      <div class="govuk-width-container ">
+        <div class="govuk-footer__meta">
+          <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+            <h2 class="govuk-visually-hidden">Support links</h2>
+            <ul class="govuk-footer__inline-list">
+              <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Cookies</a></li>
+              <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Privacy</a></li>
+              <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Accessibility</a></li>
+            </ul>
+            <span class="govuk-footer__licence-description">
+              All content is available under the <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+            </span>
+          </div>
+          <div class="govuk-footer__meta-item">
+            <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+              © Crown copyright
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html> 

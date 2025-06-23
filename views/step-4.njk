@@ -1,0 +1,39 @@
+{% extends "govuk/template.njk" %}
+
+{% block pageTitle %}
+Step 4 – Licence expiry date – Renew your driving licence – GOV.UK
+{% endblock %}
+
+{% block content %}
+  <form method="post" action="/step-4">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">What is your licence expiry date?</h1>
+        </legend>
+        <div id="expiry-hint" class="govuk-hint">For example, 27 3 2030</div>
+        <div class="govuk-date-input" id="expiry">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-day">Day</label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-day" name="expiry-day" type="text" inputmode="numeric" required>
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-month">Month</label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-month" name="expiry-month" type="text" inputmode="numeric" required>
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expiry-year">Year</label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="text" inputmode="numeric" required>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <button class="govuk-button" type="submit">Continue</button>
+  </form>
+{% endblock %} 
