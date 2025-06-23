@@ -9,23 +9,29 @@ Check your answers – Renew your driving licence – GOV.UK
   <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">Full name</dt>
-      <dd class="govuk-summary-list__value">John Doe</dd>
+      <dd class="govuk-summary-list__value">{{ fullName }}</dd>
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">Date of birth</dt>
-      <dd class="govuk-summary-list__value">1990-01-01</dd>
+      <dd class="govuk-summary-list__value">{{ dobDay }}/{{ dobMonth }}/{{ dobYear }}</dd>
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">Licence number</dt>
-      <dd class="govuk-summary-list__value">DOE900101A99AA</dd>
+      <dd class="govuk-summary-list__value">{{ licenceNumber }}</dd>
     </div>
     <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">Expiry date</dt>
-      <dd class="govuk-summary-list__value">2030-01-01</dd>
+      <dt class="govuk-summary-list__key">Licence expiry date</dt>
+      <dd class="govuk-summary-list__value">{{ expiryDay }}/{{ expiryMonth }}/{{ expiryYear }}</dd>
     </div>
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">Address</dt>
-      <dd class="govuk-summary-list__value">123 Example Street, Exampletown, EX4 MPL</dd>
+      <dd class="govuk-summary-list__value">
+        {{ addressLine1 }}<br>
+        {% if addressLine2 %}{{ addressLine2 }}<br>{% endif %}
+        {{ addressTown }}<br>
+        {% if addressCounty %}{{ addressCounty }}<br>{% endif %}
+        {{ addressPostcode }}
+      </dd>
     </div>
   </dl>
   <form method="post" action="/check-answers">

@@ -9,7 +9,14 @@ Step 3 – Licence number – Renew your driving licence – GOV.UK
     <h1 class="govuk-heading-l">What is your driving licence number?</h1>
     <div class="govuk-form-group">
       <label class="govuk-label" for="licenceNumber">Licence number</label>
-      <input class="govuk-input" id="licenceNumber" name="licenceNumber" type="text" required>
+      <div id="licenceNumber-hint" class="govuk-hint">
+        For example: MORGA857116J9999<br>
+        <small>5 letters/numbers (surname), 6 numbers (date of birth/gender), 2 letters/numbers (initials), 1 number (arbitrary), 2 numbers (check digits)</small>
+      </div>
+      {% if error %}
+        <span class="govuk-error-message"><span class="govuk-visually-hidden">Error:</span> {{ error }}</span>
+      {% endif %}
+      <input class="govuk-input" id="licenceNumber" name="licenceNumber" type="text" required placeholder="MORGA857116J9999" aria-describedby="licenceNumber-hint" value="{{ licenceNumber | default('') }}" maxlength="16">
     </div>
     <button class="govuk-button" type="submit">Continue</button>
   </form>

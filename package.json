@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
+    "express-session": "^1.18.1",
     "govuk-frontend": "^5.10.2",
     "nunjucks": "^3.2.4"
   },
