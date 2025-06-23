@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "postinstall": "mkdir -p public/govuk && cp -r node_modules/govuk-frontend/dist/govuk/* public/govuk/"
   },
   "keywords": [],
   "author": "",
